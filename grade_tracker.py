@@ -1,6 +1,6 @@
 course = input("Enter course name: ")
 print("1. Calculate my current final grade")
-print("2.Calculate the exam grade I need")
+print("2. Calculate the exam grade I need")
 
 choice = input("Choose 1 or 2: ")
 if choice == "1":
@@ -10,13 +10,6 @@ if choice == "1":
   quiz_weight = float(input("Enter quiz weigh: "))
   exam = float(input("Enter exam grade: "))
   exam_weight = float(input("Enter exam weight: "))
-  print(course)
-  print(homework)
-  print(homework_weight)
-  print(quiz)   
-  print(quiz_weight)
-  print(exam)
-  print(exam_weight)
   if homework_weight + quiz_weight + exam_weight == 100:
     if homework_weight + quiz_weight + exam_weight == 100:
       final_grade = homework * (homework_weight / 100) + quiz * (quiz_weight / 100) + exam * (exam_weight /100)
@@ -40,15 +33,8 @@ elif choice == "2":
   quiz_weight = float(input("Enter quiz weigh: "))
   exam_weight = float(input("Enter exam weight: "))
   target_grade = float(input("Enter your target grade: "))
-  print(course)
-  print(homework)
-  print(homework_weight)
-  print(quiz)
-  print(quiz_weight)
-  print(exam_weight)
-  print(target_grade)
   if homework_weight + quiz_weight + exam_weight == 100:
-    required_grade = (target_grade - homework * (homework_weight / 100) - quiz * (quiz_weiht / 100)) / (exam_weight /100)
+    required_grade = (target_grade - homework * (homework_weight / 100) - quiz * (quiz_weight / 100)) / (exam_weight /100)
     if required_grade > 100:
       print("The maximum exam grade is 100. Try improving your homework or quiz grades")
     elif 0 < required_grade <= 100:
@@ -58,9 +44,7 @@ elif choice == "2":
   else:
     print("The total weight must equal 100%")
 else:
-  print("only print 1 or 2")
-
-      
+  print("The content is invalid")
    
   
   
